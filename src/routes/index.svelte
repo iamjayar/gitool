@@ -1,2 +1,11 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<div class="center">
+  <h1>GI TOOL</h1>
+  <a href="/achievements">Achievements Tracker</a>
+</div>
+
+<style>
+  .center {
+    height: 100vh;
+    flex-direction: column;
+  }
+</style>

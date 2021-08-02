@@ -1,6 +1,9 @@
 {
-  "name": "~TODO~",
-  "version": "0.0.1",
+  "name": "gitool",
+  "version": "0.1.1",
+  "description": "Genshin Impact Tool",
+  "author": "iamjayar",
+  "license": "MIT",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
