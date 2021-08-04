@@ -24,10 +24,9 @@
 
 <style>
   .card {
-    margin: 8px 24px;
     padding: 16px 32px;
     display: grid;
-    grid-template-columns: auto 36px;
+    grid-template-columns: auto 42px;
     cursor: pointer;
     user-select: none;
   }

@@ -10,9 +10,9 @@
 
 <style>
   .card {
-    margin: 8px 0;
     padding: 16px 32px;
     position: relative;
+    user-select: none;
   }
 
   .card:hover {
@@ -26,5 +26,6 @@
     bottom: 0;
     left: 0;
     right: 0;
+    cursor: pointer;
   }
 </style>

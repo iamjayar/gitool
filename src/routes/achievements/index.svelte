@@ -45,6 +45,7 @@
 <nav>
   <div class="container navbar">
     <span>Achievement Tracker</span>
+    <span>{AchievementList.length}</span>
   </div>
 </nav>
 <div class="container panel" class:unfold={queryCategory !== 0}>
