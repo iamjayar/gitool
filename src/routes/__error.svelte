@@ -1,14 +1,8 @@
 <script lang="ts" context="module">
   import type { ErrorLoad } from "@sveltejs/kit";
-
-  export const load: ErrorLoad = async ({ error, status }) => {
-    return {
-      props: {
-        status,
-        message: error.message,
-      },
-    };
-  };
+  export const load: ErrorLoad = async ({ error, status }) => ({
+    props: { status, message: error.message },
+  });
 </script>
 
 <script lang="ts">
@@ -16,12 +10,12 @@
   export let message: string;
 </script>
 
-<div class="center">
+<div class="flex-center">
   <strong>{status}: {message}</strong>
 </div>
 
 <style>
-  .center {
+  div {
     height: 100vh;
   }
 </style>

@@ -1,23 +1,35 @@
 <script lang="ts">
-  import { currentUser, signOut } from "$lib/auth";
+  import { currentUser, supabase } from "$lib/auth";
+
+  let isLoading = false;
+
+  const handleSignOut = async () => {
+    if (isLoading) return;
+
+    isLoading = true;
+    let { error } = await supabase.auth.signOut();
+
+    isLoading = false;
+    if (error) return;
+
+    currentUser.set(null);
+  };
 </script>
 
-<div class="center">
-  <h1>GI TOOL</h1>
-  {#if $currentUser}
-    <p>{$currentUser.email}</p>
-    <button on:click={async () => await signOut()}>Sign out</button>
-  {:else}
-    <a href="/auth">Sign in</a>
-  {/if}
-  <div style="margin-top:32px">
-    <a href="/achievements">Achievements Tracker</a>
-  </div>
+<div class="container">
+  <p>{$currentUser?.email}</p>
+  <button on:click={handleSignOut} disabled={isLoading}>
+    {#if isLoading}
+      <div class="spinner" />
+    {/if}
+    Sign out</button
+  >
 </div>
 
 <style>
-  .center {
-    height: 100vh;
-    flex-direction: column;
+  .container {
+    width: min(100%, 960px);
+    margin: 0 auto;
+    padding-top: 32px;
   }
 </style>
