@@ -1,10 +1,10 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
-@import url("https://fonts.googleapis.com/css2?family=Merienda&family=Roboto:wght@100;400;700&family=Fira+Code&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merienda&family=Lato:wght@300;400;700&family=Inconsolata&display=swap");
 
 :root {
   --font-cursive: "Merienda", cursive;
-  --font-monospace: "Fira Code", monospace;
-  --font-sans-serif: "Roboto", Arial, sans-serif;
+  --font-monospace: "Inconsolata", monospace;
+  --font-sans-serif: "Lato", sans-serif;
   --bg-color: hsl(225, 6%, 13%);
   --text-color: hsl(216, 12%, 92%);
   --theme-color: hsl(17, 100%, 74%);
@@ -79,6 +79,7 @@ button:disabled,
 input:disabled {
   opacity: 0.65;
   cursor: default;
+  z-index: -1;
 }
 
 h1,

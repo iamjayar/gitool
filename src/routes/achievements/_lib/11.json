@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "...Odomu?",
+    "description": "Successfully conduct cultural exchange with the hilichurls in \"Language Exchange.\"",
+    "variant": null,
+    "reward": 5
+  },
+  {
+    "id": 2,
+    "name": "Yo dala?",
+    "description": "Successfully conduct cultural exchange with the hilichurls in \"Poetry Exchange.\"",
+    "variant": null,
+    "reward": 5
+  }
+]

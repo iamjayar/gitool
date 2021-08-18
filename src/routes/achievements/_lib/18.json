@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "name": "Fantastic Voyage: Prologue",
+    "description": "Complete \"Fantastic Voyage\" and unlock all endings.",
+    "variant": null,
+    "reward": 20
+  },
+  {
+    "id": 2,
+    "name": "Behold, Mine Evil-Espying Eye!",
+    "description": "Correctly interpret all clues.",
+    "variant": null,
+    "reward": 5
+  },
+  {
+    "id": 3,
+    "name": "Archaic Lord of Lightning and Blitz",
+    "description": "Witness the awesome meteorological power of Bennett's phenomenally bad luck.",
+    "variant": null,
+    "reward": 5
+  },
+  {
+    "id": 4,
+    "name": "The Power of Luck",
+    "description": "Activate the mechanisms and obtain the treasure without making any mistakes.",
+    "variant": null,
+    "reward": 5
+  },
+  {
+    "id": 5,
+    "name": "A Line That May Be Crossed",
+    "description": "Complete \"Wellspring of Healing\" and unlock all endings.",
+    "variant": null,
+    "reward": 20
+  },
+  {
+    "id": 6,
+    "name": "A Maid of Strength and Virtue",
+    "description": "Complete \"Chivalric Training\" and unlock all endings.",
+    "variant": null,
+    "reward": 20
+  },
+  {
+    "id": 7,
+    "name": "Evil Is Banished",
+    "description": "Complete \"Signs of Evil\" and unlock all endings.",
+    "variant": null,
+    "reward": 20
+  },
+  {
+    "id": 8,
+    "name": "Mondstadt's Spiciest Surprise",
+    "description": "Sample Barbara's Chilibrew.",
+    "variant": null,
+    "reward": 5
+  },
+  {
+    "id": 9,
+    "name": "\"...For I Am Duty Bound\"",
+    "description": "Help Noelle discover the source of her strength.",
+    "variant": null,
+    "reward": 5
+  },
+  {
+    "id": 10,
+    "name": "Red Hot Chili Popsicles",
+    "description": "Make a popsicle using the wrong recipe and provoke Chongyun's Pure-Yang Spirit.",
+    "variant": null,
+    "reward": 5
+  },
+  {
+    "id": 11,
+    "name": "An Idol's Last Line of Defense",
+    "description": "Successfully persuade Albert and Barbara's other fans to leave.",
+    "variant": null,
+    "reward": 5
+  },
+  {
+    "id": 12,
+    "name": "A World Known Only Unto Roses",
+    "description": "Read Noelle's study notes.",
+    "variant": null,
+    "reward": 5
+  },
+  {
+    "id": 13,
+    "name": "Stress Relief",
+    "description": "Complete \"Knightly Exam Prep\" and unlock all endings.",
+    "variant": null,
+    "reward": 20
+  },
+  {
+    "id": 14,
+    "name": "Invulnerable Maid-Knight",
+    "description": "Listen to \"A Knight's Journey Through Liyue\" with Noelle.",
+    "variant": null,
+    "reward": 5
+  },
+  {
+    "id": 15,
+    "name": "Mondstadt's Note-Taker General",
+    "description": "Read Noelle's study notes.",
+    "variant": null,
+    "reward": 5
+  },
+  {
+    "id": 16,
+    "name": "Diona Special, Stirred, Not Shaken",
+    "description": "Complete \"The Cat and the Cocktail\" and unlock all endings.",
+    "variant": null,
+    "reward": 20
+  },
+  {
+    "id": 17,
+    "name": "But There's a Catch...",
+    "description": "Help Diona find a special base drink.",
+    "variant": null,
+    "reward": 5
+  },
+  {
+    "id": 18,
+    "name": "Kitten Queen",
+    "description": "Bring all the cats back to The Cat's Tail.",
+    "variant": null,
+    "reward": 5
+  }
+]

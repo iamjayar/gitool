@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Hydro Hunter",
+    "description": "Defeat every type of Hydro Mimic that an Oceanid can summon.",
+    "variant": null,
+    "reward": 5
+  },
+  {
+    "id": 2,
+    "name": "Dip, Duck, Dive, Dodge, Defeat",
+    "description": "Defeat an Oceanid without being hit by water bombs left behind by certain Hydro Mimics.",
+    "variant": null,
+    "reward": 10
+  },
+  {
+    "id": 3,
+    "name": "...Well, That Was Strange",
+    "description": "Defeat the Unusual Hilichurl %var% time.",
+    "variant": [1, 20, 50],
+    "reward": [5, 10, 20]
+  },
+  {
+    "id": 4,
+    "name": "Extreme Gardening",
+    "description": "Paralyze a Cryo Regisvine by attacking its corolla.",
+    "variant": null,
+    "reward": 5
+  },
+  {
+    "id": 5,
+    "name": "Gardener Extraordinaire",
+    "description": "Paralyze a Pyro Regisvine by attacking its corolla.",
+    "variant": null,
+    "reward": 5
+  },
+  {
+    "id": 6,
+    "name": "Geronimo!",
+    "description": "Hit an opponent with a Plunging Attack after plunging for more than 5 seconds.",
+    "variant": null,
+    "reward": 5
+  },
+  {
+    "id": 7,
+    "name": "Vicious Circle",
+    "description": "Unleash 5 Elemental Bursts within 15 seconds.",
+    "variant": null,
+    "reward": 10
+  },
+  {
+    "id": 8,
+    "name": "Shield Me From the World",
+    "description": "Have a single character be protected by 3 different types of shield at once.",
+    "variant": null,
+    "reward": 10
+  }
+]

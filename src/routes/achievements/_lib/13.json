@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Geo Archon Anecdotes",
+    "description": "Collect all the stories about Rex Lapis in the \"Geo Travel Diary.\"",
+    "variant": null,
+    "reward": 5
+  },
+  {
+    "id": 2,
+    "name": "Friends, Travelers, Lend Me Your Ears...",
+    "description": "Finish listening to the tale of the Ring of Raining Blades in \"Cliffhanger.\"",
+    "variant": null,
+    "reward": 5
+  },
+  {
+    "id": 3,
+    "name": "Once Upon a Time...",
+    "description": "Finish listening to the tale of The Wrath of Haishan in \"Cliffhanger.\"",
+    "variant": null,
+    "reward": 5
+  }
+]

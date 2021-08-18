@@ -7,7 +7,6 @@ export interface Achievement {
   id: number;
   name: string;
   description: string;
-  category: number;
-  reward: number;
-  version: string;
+  variant: number[] | null;
+  reward: number[] | number;
 }

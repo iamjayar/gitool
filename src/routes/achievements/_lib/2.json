@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "The Wind and The Star Traveler",
+    "description": "Blow seeds off a Dandelion using Anemo.",
+    "variant": null,
+    "reward": 5
+  },
+  {
+    "id": 2,
+    "name": "Of Mountains High",
+    "description": "Obtain the power of Geo.",
+    "variant": null,
+    "reward": 5
+  },
+  {
+    "id": 3,
+    "name": "The Voice of Flowing Water",
+    "description": "Collect the entire \"Heart of Clear Springs\" series.",
+    "variant": null,
+    "reward": 5
+  },
+  {
+    "id": 4,
+    "name": "The Divine Halberd Mocks the Heavens",
+    "description": "Collect the entire \"Legend of the Shattered Halberd\" series.",
+    "variant": null,
+    "reward": 5
+  },
+  {
+    "id": 5,
+    "name": "The Drunkard and the Wolf",
+    "description": "Collect the entire \"A Drunkard's Tale\" series.",
+    "variant": null,
+    "reward": 5
+  },
+  {
+    "id": 6,
+    "name": "Spring, White Horse and Moonlight",
+    "description": "Collect the entire \"Moonlit Bamboo Forest\" series.",
+    "variant": null,
+    "reward": 5
+  }
+]

@@ -1,11 +1,13 @@
 <script lang="ts">
   import type { Category } from "$lib/types";
-
   export let category: Category;
+  export let count = 0;
+  export let total = 0;
 </script>
 
 <div class="card">
-  <a href={`/achievements?category=${category.id}`}>{category.name}</a>
+  <a class="btn" href={`/achievements?category=${category.id}`}>{category.name}</a>
+  <div>{Math.floor((count / total) * 100)}% [{count} / {total}]</div>
 </div>
 
 <style>

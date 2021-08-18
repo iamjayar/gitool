@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Onward and Upward",
+    "description": "Ascend a character to Phase %var% for the first time.",
+    "variant": [2, 4, 6],
+    "reward": [5, 10, 20]
+  },
+  {
+    "id": 2,
+    "name": "Re-Armed, Re-Forged",
+    "description": "Ascend a weapon to Phase %var%.",
+    "variant": [2, 4, 6],
+    "reward": [5, 10, 20]
+  },
+  {
+    "id": 3,
+    "name": "Hitherto Unknown",
+    "description": "Reach Friendship 10 with %var% characters.",
+    "variant": [4, 8, 16],
+    "reward": [5, 10, 20]
+  },
+  {
+    "id": 4,
+    "name": "Bounty of the Earth",
+    "description": "Collect %var% rewards from blossoms of wealth or blossoms of revelation.",
+    "variant": [200, 400, 800],
+    "reward": [5, 10, 20]
+  },
+  {
+    "id": 5,
+    "name": "Hero's Gift",
+    "description": "Obtain a 4-star artifact.",
+    "variant": null,
+    "reward": 5
+  },
+  {
+    "id": 6,
+    "name": "Echoing Song",
+    "description": "Enhance a 4-star artifact to its highest level.",
+    "variant": null,
+    "reward": 10
+  },
+  {
+    "id": 7,
+    "name": "Legendary Treasure",
+    "description": "Obtain a 5-star artifact.",
+    "variant": null,
+    "reward": 5
+  },
+  {
+    "id": 8,
+    "name": "Sacred Canto",
+    "description": "Enhance a 5-star artifact to its highest level.",
+    "variant": null,
+    "reward": 10
+  }
+]

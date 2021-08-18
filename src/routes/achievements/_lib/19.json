@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "name": "Realm Sans Frontières",
+    "description": "Use the Serenitea Pot to enter your realm.",
+    "variant": null,
+    "reward": 5
+  },
+  {
+    "id": 2,
+    "name": "High Adeptal Energy Readings Ahead",
+    "description": "Reach 20,000 Adeptal Energy in %var% realm layout.",
+    "variant": [1, 2, 3],
+    "reward": [5, 10, 20]
+  },
+  {
+    "id": 3,
+    "name": "Friend of the Realm",
+    "description": "Reach Trust Rank %var% with the teapot spirit.",
+    "variant": [4, 7, 10],
+    "reward": [5, 10, 20]
+  },
+  {
+    "id": 4,
+    "name": "T—T—T—Timberhochwandi",
+    "description": "Obtain %var% pieces of wood.",
+    "variant": [100, 600, 2000],
+    "reward": [5, 10, 20]
+  },
+  {
+    "id": 5,
+    "name": "If I Were a Rich Man",
+    "description": "Obtain %var%,000 realm currency.",
+    "variant": [2, 10, 50],
+    "reward": [5, 10, 20]
+  },
+  {
+    "id": 6,
+    "name": "Not Just a Small Bench",
+    "description": "Create %var% furnishings.",
+    "variant": [120, 300, 600],
+    "reward": [5, 10, 20]
+  },
+  {
+    "id": 7,
+    "name": "Color It In",
+    "description": "Create %var% dyes.",
+    "variant": [50, 200, 600],
+    "reward": [5, 10, 20]
+  },
+  {
+    "id": 8,
+    "name": "Precision Modeling",
+    "description": "Learn 60 furnishing blueprints.",
+    "variant": [60, 120, 180],
+    "reward": [5, 10, 20]
+  },
+  {
+    "id": 9,
+    "name": "My... Territory",
+    "description": "Place %var% furnishings in a single realm layout.",
+    "variant": [50, 150, 300],
+    "reward": [5, 10, 20]
+  }
+]

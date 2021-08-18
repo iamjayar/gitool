@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Master Sniper",
+    "description": "Strike an opponent's weak point from afar with an Aimed Shot.",
+    "variant": null,
+    "reward": 5
+  },
+  {
+    "id": 2,
+    "name": "Der Freischütz",
+    "description": "Strike an opponent's weak point from extremely far away with an Aimed Shot.",
+    "variant": null,
+    "reward": 5
+  }
+]

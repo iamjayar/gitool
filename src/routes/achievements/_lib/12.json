@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Perfectionist",
+    "description": "Complete all of Tsarevich's commissions flawlessly in \"Reliable Helper.\"",
+    "variant": null,
+    "reward": 5
+  },
+  {
+    "id": 2,
+    "name": "Telling It How It Is",
+    "description": "Gather intelligence concerning Snezhnaya in \"Tales of Winter.\"",
+    "variant": null,
+    "reward": 5
+  }
+]
