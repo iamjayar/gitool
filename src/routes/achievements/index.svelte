@@ -6,7 +6,7 @@
 </script>
 
 <script lang="ts">
-  import reduce from "lodash/reduce";
+  import { reduce } from "lodash";
 
   import categories from "./_lib/categories.json";
   import category1 from "./_lib/1.json";
