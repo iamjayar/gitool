@@ -6,7 +6,7 @@
 </script>
 
 <script lang="ts">
-  import { reduce } from "lodash";
+  import _ from "lodash";
 
   import categories from "./_lib/categories.json";
   import category1 from "./_lib/1.json";
@@ -65,7 +65,7 @@
   );
 
   const counterPerCategory = (collection) => {
-    return reduce(collection, (res, val) => res + val, 0);
+    return _.reduce(collection, (res, val) => res + val, 0);
   };
 
   const totalPerCategory = (id: number) => {
