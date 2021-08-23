@@ -1,12 +1,11 @@
 <script lang="ts">
   import iconPrimogem from "$assets/primogem.png";
-  import { completed } from "./_lib/store";
-  import type { Achievement } from "$lib/types";
+  import { completed } from "$lib/achievements/store";
 
-  export let achievement: Achievement;
+  export let achievement: AchievementTypes;
   export let category: number;
 
-  const getStoredValue = (collection: {}): number => (collection ? collection[achievement.id] || 0 : 0);
+  const getStoredValue = (store: CollectionNumberTypes) => (store ? store[achievement.id] || 0 : 0);
   const handleChange = (event: Event, value: number) => {
     let isChecked = (<HTMLInputElement>event.target).checked;
     completed.update(category, achievement.id, isChecked ? value + 1 : value);
@@ -17,7 +16,7 @@
   <h3>{achievement.name}</h3>
   {#if achievement.variant}
     {#each achievement.variant as variant, index}
-      <div class="item">
+      <div class="variant">
         <div class="flex-justified">{achievement.description.replace(/%var%/g, variant.toString())}</div>
         <div class="flex-center">
           <img src={iconPrimogem} width="24" height="24" alt="primo" />
@@ -26,15 +25,15 @@
         <div class="flex-center">
           <input
             type="checkbox"
-            on:change={(event) => handleChange(event, index)}
             checked={getStoredValue($completed[category]) > index}
             disabled={getStoredValue($completed[category]) < index}
+            on:change={(event) => handleChange(event, index)}
           />
         </div>
       </div>
     {/each}
   {:else}
-    <div class="item">
+    <div class="variant">
       <div class="flex-justified">{achievement.description}</div>
       <div class="flex-center">
         <img src={iconPrimogem} width="24" height="24" alt="primo" />
@@ -43,8 +42,8 @@
       <div class="flex-center">
         <input
           type="checkbox"
-          on:change={(event) => handleChange(event, 0)}
           checked={getStoredValue($completed[category]) > 0}
+          on:change={(event) => handleChange(event, 0)}
         />
       </div>
     </div>
@@ -69,7 +68,7 @@
     border-bottom: 1px solid hsl(0, 0%, 20%);
   }
 
-  .item {
+  .variant {
     padding: 8px 0;
     display: grid;
     grid-template-columns: auto 36px 36px;
@@ -80,8 +79,8 @@
   }
 
   input[type="checkbox"] {
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
     cursor: pointer;
   }
 </style>

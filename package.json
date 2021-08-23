@@ -1,9 +1,14 @@
 {
   "name": "gitool",
-  "version": "0.1.1",
+  "version": "0.2.2",
   "description": "Genshin Impact Tool",
   "author": "iamjayar",
   "license": "MIT",
+  "homepage": "https://gitool.vercel.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iamjayar/gitool.git"
+  },
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
@@ -16,7 +21,6 @@
   "devDependencies": {
     "@sveltejs/adapter-vercel": "next",
     "@sveltejs/kit": "next",
-    "@types/lodash": "^4.14.172",
     "@typescript-eslint/eslint-plugin": "^4.19.0",
     "@typescript-eslint/parser": "^4.19.0",
     "eslint": "^7.22.0",
@@ -32,7 +36,6 @@
   },
   "type": "module",
   "dependencies": {
-    "@supabase/supabase-js": "^1.21.0",
-    "lodash": "^4.17.21"
+    "@supabase/supabase-js": "^1.21.0"
   }
 }
