@@ -36,6 +36,7 @@
   },
   "type": "module",
   "dependencies": {
-    "@supabase/supabase-js": "^1.21.0"
+    "@supabase/supabase-js": "^1.21.0",
+    "text-security": "^3.2.1"
   }
 }

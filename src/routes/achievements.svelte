@@ -53,6 +53,7 @@
       <div class="banner">
         <h2>{categories.find((category) => category.id === categoryQuery).name}</h2>
         <input bind:value={filterText} type="search" placeholder="Filter achievements" />
+        <button on:click={() => completed.reset()}>Reset</button>
       </div>
 
       {#each filteredList as achievement}

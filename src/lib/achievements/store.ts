@@ -2,7 +2,7 @@ import { browser } from "$app/env";
 import { writable } from "svelte/store";
 
 export const completed = (() => {
-  const { set, subscribe, update } = writable({});
+  const store = writable({});
 
   if (browser) {
     const STORAGE_NAME = "achievements";
@@ -12,26 +12,25 @@ export const completed = (() => {
       return JSON.parse(data);
     })();
 
-    set(init);
-    subscribe((state) => {
+    store.set(init);
+    store.subscribe((state) => {
       localStorage.setItem(STORAGE_NAME, JSON.stringify(state));
     });
 
     window.addEventListener("storage", ({ key, newValue }) => {
       if (key !== STORAGE_NAME) return;
-      set(JSON.parse(newValue));
+      store.set(JSON.parse(newValue));
     });
   }
 
   return {
-    subscribe,
-    reset: () => set({}),
-    update: (category: number, item: number, value: number) => {
-      return update((state) => {
+    subscribe: store.subscribe,
+    reset: () => store.set({}),
+    update: (category: number, id: number, value: number) =>
+      store.update((state) => {
         if (!state[category]) state[category] = {};
-        state[category][item] = value;
+        state[category][id] = value;
         return state;
-      });
-    },
+      }),
   };
 })();

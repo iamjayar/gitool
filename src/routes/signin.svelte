@@ -42,7 +42,7 @@
   <form on:submit|preventDefault={handleSubmit}>
     <input bind:value={email} type="email" placeholder="Email" required />
     <input bind:value={password} type="password" placeholder="Password" required />
-    <button type="submit" disabled={isLoading}>
+    <button type="submit" class="btn-primary" disabled={isLoading}>
       {#if isLoading}
         <div class="spinner" />
       {/if}
@@ -82,18 +82,7 @@
     padding: 12px 16px;
     border: 1px solid hsl(0, 0%, 20%);
     border-radius: 4px;
-    font-family: var(--font-monospace);
-  }
-
-  button[type="submit"] {
-    padding: 12px 12px;
-    border: 1px solid var(--theme-color);
-    border-radius: 4px;
-  }
-
-  button[type="submit"]:hover {
-    background-color: var(--theme-color);
-    color: hsl(0, 0%, 10%);
+    font-family: "Inconsolata", monospace;
   }
 
   .spinner {

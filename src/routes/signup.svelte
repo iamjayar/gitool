@@ -50,9 +50,23 @@
 
   <form on:submit|preventDefault={handleSubmit}>
     <input bind:value={email} type="email" placeholder="Email" required />
-    <input bind:value={password} type="password" placeholder="Password" required />
-    <input bind:value={confirmation} type="password" placeholder="Confirm Password" required />
-    <button type="submit" disabled={isLoading}>
+    <input
+      bind:value={password}
+      class:text-secure={password}
+      type="text"
+      placeholder="Password"
+      spellcheck="false"
+      required
+    />
+    <input
+      bind:value={confirmation}
+      class:text-secure={confirmation}
+      type="text"
+      placeholder="Confirm Password"
+      spellcheck="false"
+      required
+    />
+    <button type="submit" class="btn-primary" disabled={isLoading}>
       {#if isLoading}
         <div class="spinner" />
       {/if}
@@ -90,24 +104,12 @@
   }
 
   input[type="email"],
-  input[type="password"] {
+  input[type="text"] {
     width: 100%;
     margin-bottom: 16px;
     padding: 12px 16px;
     border: 1px solid hsl(0, 0%, 20%);
     border-radius: 4px;
-    font-family: var(--font-monospace);
-  }
-
-  button[type="submit"] {
-    padding: 12px 12px;
-    border: 1px solid var(--theme-color);
-    border-radius: 4px;
-  }
-
-  button[type="submit"]:hover {
-    background-color: var(--theme-color);
-    color: hsl(0, 0%, 10%);
   }
 
   .spinner {

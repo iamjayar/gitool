@@ -1,5 +1,6 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Merienda&family=Inconsolata&display=swap");
+@import "text-security/text-security-disc.css";
 
 :root {
   --bg-color: hsl(225, 6%, 13%);
@@ -105,13 +106,21 @@ a {
   text-decoration: none;
 }
 
-a:not(.btn):hover {
-  text-decoration: underline;
+.btn-primary {
+  padding: 0.5rem 1rem;
+  text-align: center;
+  border-color: var(--theme-color);
+  border-radius: 0.25rem;
+}
+
+.btn-primary:hover {
+  background-color: var(--theme-color);
+  color: hsl(0, 0%, 10%);
 }
 
 .alert {
-  padding: 16px 16px;
-  margin-bottom: 16px;
+  padding: 1rem 1rem;
+  margin-top: 1rem;
   border: 1px solid transparent;
   border-radius: 4px;
 }
@@ -124,11 +133,15 @@ a:not(.btn):hover {
   border: 0.125em solid currentColor;
   border-right-color: transparent;
   border-radius: 50%;
-  animation: 0.75s linear infinite spinner-border;
+  animation: 0.75s linear infinite spinner-rotate;
 }
 
-@keyframes spinner-border {
+@keyframes spinner-rotate {
   to {
     transform: rotate(360deg);
   }
+}
+
+.text-secure {
+  font-family: "text-security-disc" !important;
 }
