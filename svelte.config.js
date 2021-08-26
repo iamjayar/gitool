@@ -1,21 +1,12 @@
 import preprocess from "svelte-preprocess";
 import vercel from "@sveltejs/adapter-vercel";
-import { resolve } from "path";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-  preprocess: preprocess(),
+  preprocess: [preprocess({ postcss: true })],
   kit: {
     adapter: vercel(),
     target: "#svelte",
-    vite: {
-      resolve: {
-        alias: {
-          $assets: resolve("./src/assets"),
-          $components: resolve("./src/components"),
-        },
-      },
-    },
   },
 };
 

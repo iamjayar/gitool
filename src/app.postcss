@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .spinner {
+    @apply animate-spin inline-block rounded-half;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.125em;
+    border: 0.125em solid currentColor;
+    border-right-color: transparent;
+  }
+
+  .stretched-link {
+    @apply cursor-pointer
+      before:absolute before:inset-0;
+  }
+}

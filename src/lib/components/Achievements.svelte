@@ -1,5 +1,5 @@
 <script lang="ts">
-  import iconPrimogem from "$assets/primogem.png";
+  import iconPrimogem from "$lib/assets/primogem.png";
   import { completed } from "$lib/achievements/store";
 
   export let achievement: AchievementTypes;

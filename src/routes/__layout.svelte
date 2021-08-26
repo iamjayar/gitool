@@ -1,5 +1,11 @@
 <script lang="ts">
-  import "../app.css";
+  import Navbar from "$lib/components/Navbar.svelte";
+  import "../app.postcss";
 </script>
 
-<slot />
+<main class="h-screen bg-gray-100 text-gray-700 flex flex-col">
+  <Navbar />
+  <div class="h-auto overflow-y-scroll">
+    <slot />
+  </div>
+</main>

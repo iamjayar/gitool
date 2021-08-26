@@ -10,12 +10,6 @@
   export let message: string;
 </script>
 
-<div class="flex-center">
+<div class="h-screen flex justify-center items-center">
   <strong>{status}: {message}</strong>
 </div>
-
-<style>
-  div {
-    height: 100vh;
-  }
-</style>

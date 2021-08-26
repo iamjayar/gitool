@@ -6,8 +6,8 @@
 </script>
 
 <script lang="ts">
-  import Category from "$components/category.svelte";
-  import Achievement from "$components/achievements.svelte";
+  import Category from "$lib/components/Category.svelte";
+  import Achievement from "$lib/components/Achievements.svelte";
 
   import categories from "$lib/achievements/0.json";
   import * as achievements from "$lib/achievements";
@@ -36,8 +36,8 @@
   <title>Achievement</title>
 </svelte:head>
 
-<div class="container" class:open={categoryQuery !== 0}>
-  <aside>
+<div class="max-w-4xl mx-auto" class:open={categoryQuery !== 0}>
+  <aside class="flex flex-wrap justify-evenly">
     {#each categories as category}
       <Category
         {category}
@@ -50,7 +50,7 @@
 
   {#if categoryQuery}
     <section>
-      <div class="banner">
+      <div class="p-5 sticky top-0 grid grid-cols-2">
         <h2>{categories.find((category) => category.id === categoryQuery).name}</h2>
         <input bind:value={filterText} type="search" placeholder="Filter achievements" />
         <button on:click={() => completed.reset()}>Reset</button>
@@ -63,12 +63,7 @@
   {/if}
 </div>
 
-<style>
-  .container {
-    width: min(100%, 1020px);
-    margin: 0 auto;
-  }
-
+<!-- <style>
   .container.open aside {
     display: none;
     height: 100vh;
@@ -117,4 +112,4 @@
   input[type="search"]:focus {
     border-bottom-color: var(--theme-color);
   }
-</style>
+</style> -->
