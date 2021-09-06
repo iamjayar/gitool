@@ -29,8 +29,9 @@ const config = {
         cursive: ["Merienda", "cursive"],
       },
       gridTemplateColumns: {
-        container: "clamp(180px, 20%, 280px) auto",
-        item: "auto repeat(2, 36px)",
+        "layout-1": "min(30%, 260px) auto",
+        "layout-2": "min(35%, 360px) auto",
+        "layout-3": "auto repeat(2, 42px)",
       },
       height: {
         rest: "calc(100vh - 48px)",

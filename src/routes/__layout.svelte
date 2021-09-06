@@ -5,7 +5,7 @@
 </script>
 
 <Navbar />
-<main class="container mx-auto px-4 flex flex-col md:grid md:grid-cols-container">
+<main class="container mx-auto px-4 flex flex-col md:grid grid-cols-layout-1">
   <aside class="hidden md:block">
     <Sidenav />
   </aside>
