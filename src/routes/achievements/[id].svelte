@@ -18,7 +18,7 @@
 </script>
 
 <script lang="ts">
-  import { store } from "./_lib/store";
+  import { store } from "./lib/store";
   import iconPrimogem from "$lib/assets/primogem.png";
   import ProgressBar from "$lib/components/ProgressBar.svelte";
 
