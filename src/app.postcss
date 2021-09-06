@@ -1,10 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components {
   .spinner {
-    @apply animate-spin inline-block rounded-half;
+    @apply rounded-half animate-spin;
     width: 1em;
     height: 1em;
     vertical-align: -0.125em;
@@ -12,8 +14,12 @@
     border-right-color: transparent;
   }
 
-  .stretched-link {
-    @apply cursor-pointer
-      before:absolute before:inset-0;
+  .h-rest {
+    height: calc(100vh - 3.5rem);
+  }
+
+  .form-input {
+    @apply w-full mb-2 px-4 py-3 border border-gray-300 rounded
+      focus:border-blue-300 focus:ring focus:ring-blue-300 focus:outline-none;
   }
 }

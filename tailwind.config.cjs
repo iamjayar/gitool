@@ -1,17 +1,17 @@
 const colors = require("tailwindcss/colors");
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 const config = {
   mode: "jit",
   purge: ["./src/**/*.{html,js,svelte,ts}"],
   theme: {
     colors: {
-      current: "currentColor",
       transparent: "transparent",
-      black: colors.black,
-      gray: colors.gray,
-      white: colors.white,
+      current: "currentColor",
       blue: colors.blue,
+      gray: colors.gray,
       sky: colors.sky,
+      white: colors.white,
     },
     screens: {
       xs: "460px",
@@ -23,6 +23,16 @@ const config = {
     extend: {
       borderRadius: {
         half: "50%",
+      },
+      fontFamily: {
+        sans: ["Open sans", ...defaultTheme.fontFamily.sans],
+        cursive: ["Merienda", "cursive"],
+      },
+      gridTemplateColumns: {
+        container: "clamp(180px, 20%, 280px) auto",
+      },
+      height: {
+        rest: "calc(100vh - 48px)",
       },
     },
   },

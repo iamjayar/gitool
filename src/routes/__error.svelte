@@ -10,6 +10,6 @@
   export let message: string;
 </script>
 
-<div class="h-screen flex justify-center items-center">
+<div class="max-w-lg mx-auto p-8 border border-gray-200 rounded shadow">
   <strong>{status}: {message}</strong>
 </div>

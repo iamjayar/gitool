@@ -1,6 +1,6 @@
 <script lang="ts">
   import { currentUser, supabase } from "$lib/auth";
-  import Login from "$lib/components/Login.svelte";
+  import Login from "$lib/components/Auth.svelte";
 
   let isLoading = false;
 

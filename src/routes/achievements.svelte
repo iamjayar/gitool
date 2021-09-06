@@ -36,12 +36,12 @@
   <title>Achievement</title>
 </svelte:head>
 
-<div class="max-w-4xl mx-auto" class:open={categoryQuery !== 0}>
-  <aside class="flex flex-wrap justify-evenly">
+<div class={categoryQuery === 0 ? "max-w-4xl mx-auto" : "max-w-5xl mx-auto grid grid-cols-3"}>
+  <aside class={categoryQuery === 0 ? "flex flex-wrap justify-evenly" : "max-w-xl mx-auto hidden md:block"}>
     {#each categories as category}
       <Category
         {category}
-        grid={categoryQuery === 0}
+        active={categoryQuery !== 0}
         completed={getCount($completed[category.id])}
         total={getTotal(category.id)}
       />
@@ -49,10 +49,12 @@
   </aside>
 
   {#if categoryQuery}
-    <section>
-      <div class="p-5 sticky top-0 grid grid-cols-2">
-        <h2>{categories.find((category) => category.id === categoryQuery).name}</h2>
-        <input bind:value={filterText} type="search" placeholder="Filter achievements" />
+    <section class={categoryQuery === 0 ? "" : "col-span-2"}>
+      <div class="sticky top-0 mx-3 mb-2 px-5 py-2 bg-white grid grid-cols-2 shadow-lg">
+        <h2 class="text-3xl font-bold col-span-2">
+          {categories.find((category) => category.id === categoryQuery).name}
+        </h2>
+        <input class="rounded" bind:value={filterText} type="search" placeholder="Filter achievements" />
         <button on:click={() => completed.reset()}>Reset</button>
       </div>
 
