@@ -3,6 +3,7 @@
 interface CategoryTypes {
   id: number;
   name: string;
+  count: number;
 }
 
 interface AchievementTypes {

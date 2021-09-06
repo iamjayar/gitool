@@ -12,18 +12,19 @@
   };
 </script>
 
-<div class="card">
-  <h3>{achievement.name}</h3>
+<div class="mb-2 p-4 flex flex-col border border-gray-300 rounded shadow">
+  <h3 class="font-bold text-lg">{achievement.name}</h3>
   {#if achievement.variant}
     {#each achievement.variant as variant, index}
-      <div class="variant">
-        <div class="flex-justified">{achievement.description.replace(/%var%/g, variant.toString())}</div>
-        <div class="flex-center">
+      <div class="grid grid-cols-item">
+        <div class="flex items-center">{achievement.description.replace(/%var%/g, variant.toString())}</div>
+        <div class="flex flex-col justify-center items-center">
           <img src={iconPrimogem} width="24" height="24" alt="primo" />
-          <div>{achievement.reward[index]}</div>
+          <p class="text-sm">{achievement.reward[index]}</p>
         </div>
-        <div class="flex-center">
+        <div class="flex justify-center items-center">
           <input
+            class="w-5 h-5 cursor-pointer"
             type="checkbox"
             checked={getStoredValue($completed[category]) > index}
             disabled={getStoredValue($completed[category]) < index}
@@ -33,14 +34,15 @@
       </div>
     {/each}
   {:else}
-    <div class="variant">
-      <div class="flex-justified">{achievement.description}</div>
-      <div class="flex-center">
+    <div class="grid grid-cols-item">
+      <div class="flex">{achievement.description}</div>
+      <div class="flex flex-col justify-center items-center">
         <img src={iconPrimogem} width="24" height="24" alt="primo" />
-        <div>{achievement.reward}</div>
+        <div class="text-sm">{achievement.reward}</div>
       </div>
-      <div class="flex-center">
+      <div class="flex justify-center items-center">
         <input
+          class="w-5 h-5 cursor-pointer"
           type="checkbox"
           checked={getStoredValue($completed[category]) > 0}
           on:change={(event) => handleChange(event, 0)}
@@ -49,38 +51,3 @@
     </div>
   {/if}
 </div>
-
-<style>
-  .card {
-    margin: 8px 16px;
-    padding: 16px 16px;
-    background-color: hsla(0, 0%, 0%, 0.2);
-  }
-
-  .card:hover {
-    background-color: hsla(0, 0%, 0%, 0.1);
-  }
-
-  h3 {
-    color: hsl(17, 100%, 74%);
-    margin: 0;
-    padding-bottom: 8px;
-    border-bottom: 1px solid hsl(0, 0%, 20%);
-  }
-
-  .variant {
-    padding: 8px 0;
-    display: grid;
-    grid-template-columns: auto 36px 36px;
-  }
-
-  .flex-center {
-    flex-direction: column;
-  }
-
-  input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-  }
-</style>

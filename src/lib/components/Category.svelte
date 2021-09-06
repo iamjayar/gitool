@@ -4,7 +4,6 @@
   export let category: CategoryTypes;
   export let active: boolean;
   export let completed: number;
-  export let total: number;
 </script>
 
 <div
@@ -19,8 +18,8 @@
     {category.name}
   </a>
   <div class={active ? "flex flex-row justify-between" : "flex flex-col"}>
-    <span class="text-center">[{completed} / {total}]</span>
-    <span class="text-center">{Math.floor((completed / total) * 100)}%</span>
+    <span class="text-center">[{completed} / {category.count}]</span>
+    <span class="text-center">{Math.floor((completed / category.count) * 100)}%</span>
   </div>
-  <ProgressBar value={completed / total} />
+  <ProgressBar value={completed / category.count} />
 </div>

@@ -25,11 +25,6 @@
     if (!collection) return 0;
     return Object.values(collection).reduce((prev, val) => prev + val, 0);
   };
-
-  const getTotal = (id: number) => {
-    let list = <AchievementTypes[]>(achievements[`Category${id}`] || []);
-    return list.reduce((res, val) => (val.variant === null ? res + 1 : res + val.variant.length), 0);
-  };
 </script>
 
 <svelte:head>
@@ -39,22 +34,17 @@
 <div class={categoryQuery === 0 ? "max-w-4xl mx-auto" : "max-w-5xl mx-auto grid grid-cols-3"}>
   <aside class={categoryQuery === 0 ? "flex flex-wrap justify-evenly" : "max-w-xl mx-auto hidden md:block"}>
     {#each categories as category}
-      <Category
-        {category}
-        active={categoryQuery !== 0}
-        completed={getCount($completed[category.id])}
-        total={getTotal(category.id)}
-      />
+      <Category {category} active={categoryQuery !== 0} completed={getCount($completed[category.id])} />
     {/each}
   </aside>
 
   {#if categoryQuery}
     <section class={categoryQuery === 0 ? "" : "col-span-2"}>
-      <div class="sticky top-0 mx-3 mb-2 px-5 py-2 bg-white grid grid-cols-2 shadow-lg">
+      <div class="mx-3 mb-2 px-5 py-2 bg-white grid grid-cols-2">
         <h2 class="text-3xl font-bold col-span-2">
           {categories.find((category) => category.id === categoryQuery).name}
         </h2>
-        <input class="rounded" bind:value={filterText} type="search" placeholder="Filter achievements" />
+        <input class="rounded" bind:value={filterText} type="search" placeholder="Search / Filter achievements" />
         <button on:click={() => completed.reset()}>Reset</button>
       </div>
 

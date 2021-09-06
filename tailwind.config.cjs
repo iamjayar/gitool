@@ -30,6 +30,7 @@ const config = {
       },
       gridTemplateColumns: {
         container: "clamp(180px, 20%, 280px) auto",
+        item: "auto repeat(2, 36px)",
       },
       height: {
         rest: "calc(100vh - 48px)",
