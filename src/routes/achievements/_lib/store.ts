@@ -1,36 +1,31 @@
-import { browser } from "$app/env";
 import { writable } from "svelte/store";
 
-export const completed = (() => {
-  const store = writable({});
-
-  if (browser) {
-    const STORAGE_NAME = "achievements";
-    const init = (() => {
-      let data = localStorage.getItem(STORAGE_NAME);
-      if (!data) return {};
-      return JSON.parse(data);
-    })();
-
-    store.set(init);
-    store.subscribe((state) => {
-      localStorage.setItem(STORAGE_NAME, JSON.stringify(state));
-    });
-
-    window.addEventListener("storage", ({ key, newValue }) => {
-      if (key !== STORAGE_NAME) return;
-      store.set(JSON.parse(newValue));
-    });
-  }
+export const store = (() => {
+  const data = writable({});
+  const counter = writable({});
 
   return {
-    subscribe: store.subscribe,
-    reset: () => store.set({}),
-    update: (category: number, id: number, value: number) =>
-      store.update((state) => {
+    data: { subscribe: data.subscribe },
+    counter: { subscribe: counter.subscribe },
+    reset: () => {
+      data.set({});
+      counter.set({});
+    },
+    update: (category: number, id: number, value: number) => {
+      let change = 0;
+
+      data.update((state) => {
         if (!state[category]) state[category] = {};
+        change = value - (state[category][id] || 0);
         state[category][id] = value;
         return state;
-      }),
+      });
+
+      counter.update((state) => {
+        if (!state[category]) state[category] = 0;
+        state[category] += change;
+        return state;
+      });
+    },
   };
 })();
